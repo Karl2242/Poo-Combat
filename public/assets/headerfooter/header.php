@@ -6,6 +6,7 @@
     <title>Solo Leveling</title>
     <link rel="stylesheet" href="./assets/css/output.css">
     <link rel="stylesheet" href="./assets/css/output.css">
+    
 </head>
 <body>
 <header class="flex justify-center pt-3">

@@ -32,7 +32,7 @@ public function createHero(string $name, $pv = 100, $url_img = "./assets/image/h
 session_start();
         
 $_SESSION["name"] = $name;
-$_SESSION["pv"] = $pv;
+$_SESSION["pv"] = 10;
 $_SESSION["img"] = $url_img;
 
         return $heroInstance;
