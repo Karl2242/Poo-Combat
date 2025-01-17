@@ -10,7 +10,7 @@ $cvraioupaslesang = $monRepo->verifyHero($_POST['name']);
 
 
 if($cvraioupaslesang == false){
-    header("Location: ../public/home.php");
+    header("Location: ../public/choiceHero.php");
     exit;
 }else{
     $monRepo->createHero($_POST['name']);
