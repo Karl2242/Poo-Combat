@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "name": "poo-combat-plus",
+  "version": "1.0.0",
+  "description": "Ce TP s'adresse aux apprenants ayant déjà un niveau correct en développement web et sert d'alternative à sa version classique : [POO-Combat](https://github.com/G404-DWWM/POO-Combat).",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./public/assets/css/style.css -o ./public/assets/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
