@@ -6,7 +6,11 @@ module.exports = {
     "./public/**/**/*.php",
     ],
   theme: {
-    extend: {},
+    extend: {
+      'backgroundImage': {
+        'main': "./assets/image/decor-main.gif"
+      }
+    },
   },
   plugins: [],
 }

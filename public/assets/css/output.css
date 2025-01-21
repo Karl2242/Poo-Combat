@@ -614,6 +614,43 @@ video {
   width: 100%;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -667,6 +704,11 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
@@ -682,13 +724,62 @@ video {
   background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
 }
 
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
+}
+
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[url\(\'\.\/assets\/image\/decor-main\.gif\'\)\] {
+  background-image: url('./assets/image/decor-main.gif');
+}
+
+.bg-\[url\(\'\.\.\/assets\/image\/decor-main\.gif\'\)\] {
+  background-image: url('../assets/image/decor-main.gif');
+}
+
+.bg-\[url\(\'\.\.\/\/image\/decor-main\.gif\'\)\] {
+  background-image: url('..//image/decor-main.gif');
+}
+
+.bg-\[url\(\'\.\.\/image\/decor-main\.gif\'\)\] {
+  background-image: url('../image/decor-main.gif');
+}
+
+.bg-\[url\(\'\.\.\/image\/decors-main\.gif\'\)\] {
+  background-image: url('../image/decors-main.gif');
+}
+
+.bg-\[url\(\'\.\.\/image\/decors-\.gif\'\)\] {
+  background-image: url('../image/decors-.gif');
+}
+
+.bg-\[url\(\'\.\.\/image\/decors-combat\.gif\'\)\] {
+  background-image: url('../image/decors-combat.gif');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-7 {
@@ -761,6 +852,10 @@ video {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
 }
 
 .hover\:bg-slate-500:hover {

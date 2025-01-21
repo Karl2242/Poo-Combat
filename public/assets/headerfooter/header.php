@@ -8,8 +8,4 @@
     <link rel="stylesheet" href="./assets/css/output.css">
     
 </head>
-<body>
-<header class="flex justify-center pt-3">
-    <img class="w-[6%]" src="./assets/image/logo.png" alt="">
-</header>
 

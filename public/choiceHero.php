@@ -9,7 +9,13 @@ $heroes = $heroRepository->findAll();
 
 ?>
 
-<main class="w-full flex flex-wrap justify-center h-[700px]">
+<body>
+<header class="flex justify-center pt-3">
+    <img class="w-[6%]" src="./assets/image/logo.png" alt="">
+</header>
+
+
+<main class="w-full flex flex-wrap gap-8 justify-center h-[700px]">
 
 <?php 
 /**

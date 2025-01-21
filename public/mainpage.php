@@ -12,13 +12,20 @@ include_once "./assets/headerfooter/header.php";
 
 ?>
 
+<body class="bg-center bg-[url('../image/decor-main.gif')] bg-cover">
+<header class="flex justify-center pt-3">
+    <img class="w-[6%]" src="./assets/image/logo.png" alt="">
+</header>
+
+
+
 <main class="flex w-full items-center">
     <div class="w-[70%] pt-20 justify-start gap-8 flex"> <!-- Partie gauche -->
         <div class="flex flex-col items-center">
-            <img class="w-[50%]" src="<?= $hero->getUrl_img() ?>" alt="<?= htmlspecialchars($hero->getName()) ?>">
-            <p class="text-6xl font-extrabold"><?= htmlspecialchars($hero->getName()) ?></p>
-            <div class="border-2 w-[50%] h-[60px] border-black ">
-                <div id="barrevie" class="bg-green-600 w-[<?= htmlspecialchars($hero->getPv()) ?>%] h-full">
+            <img class="w-[50%] animate-pulse anim-perso" src="<?= $hero->getUrl_img() ?>" alt="<?= htmlspecialchars($hero->getName()) ?>">
+            <p class="text-6xl text-white font-extrabold"><?= htmlspecialchars($hero->getName()) ?></p>
+            <div class="border-2 w-[50%] h-[60px] border-white ">
+                <div id="barrevie" class="bg-green-600 h-full" style="width: <?= htmlspecialchars($hero->getPv()) ?>%">
                 </div>
             </div>
         </div>

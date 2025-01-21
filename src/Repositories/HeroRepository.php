@@ -61,4 +61,14 @@ class HeroRepository extends AbstractRepository
 
         return $heroInstance;
     }
+
+
+    public function setHp(int $hp, string $name){
+        $sql = "UPDATE hero SET pv = :pv WHERE user_name = :name";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':name', $name);
+        $stmt->bindValue(':pv', $hp);
+        $stmt->execute();
+    }
+
 }

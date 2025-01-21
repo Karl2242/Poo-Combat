@@ -2,6 +2,9 @@
 
 require_once '../utils/autoloader.php';
 
+   
+
+
 session_start();
 
 /**
@@ -17,6 +20,13 @@ $monster = $_SESSION['monster'];
 include_once "./assets/headerfooter/header.php";
 
 ?>
+
+<body class="bg-center bg-[url('../image/decors-combat.gif')] bg-cover">
+<header class="flex justify-center pt-3">
+    <img class="w-[6%]" src="./assets/image/logo.png" alt="">
+</header>
+
+   
 
 
 <div class="flex flex-col text-center justify-center">
@@ -36,8 +46,8 @@ include_once "./assets/headerfooter/header.php";
 
    ?>
 
-         <p><?= $hero->getName() ?> à infligé <?= $hitHero ?> dégats</p>
-         <p>Le <?= $monster->getName() ?> à infligé <?= $hitMonster ?> dégats</p>
+         <p class="text-white"><?= $hero->getName() ?> à infligé <?= $hitHero ?> dégats</p>
+         <p class="text-white">Le <?= $monster->getName() ?> à infligé <?= $hitMonster ?> dégats</p>
    
    
    <?php
@@ -56,6 +66,10 @@ if($monster->getPv() < 0){
 
    }
    ?>
+
+<form class="hover:cursor-pointer p-6 bg-red-600 text-white" action="../process/processChangeHp.php" method="post">
+<input class="w-full" type="submit" value="Retour a la base">
+</form>
 
 </div>
 
