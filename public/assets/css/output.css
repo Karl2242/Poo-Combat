@@ -566,6 +566,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[100px\] {
   height: 100px;
 }
@@ -606,16 +610,16 @@ video {
   width: 70%;
 }
 
-.w-\[\<\?\=\$_SESSION\[\"pv\"\]\?\>\%\] {
-  width: <?=$ SESSION["pv"]?>%;
-}
-
 .w-full {
   width: 100%;
 }
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -715,6 +719,10 @@ video {
 
 .pt-7 {
   padding-top: 1.75rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-6xl {

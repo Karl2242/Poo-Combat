@@ -1,74 +1,64 @@
 <?php
 
-class HeroRepository extends AbstractRepository {
+class HeroRepository extends AbstractRepository
+{
 
+    public function findAll(): array
+    {
+        $sql = "SELECT * FROM hero";
+        $stmt = $this->pdo->query($sql);
+        $datas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-public function verifyHero($name){
+        if (!$datas) {
+            header("Location: ../home.php");
+            exit;
+        }
 
-$sql = "SELECT * FROM hero WHERE user_name = :name";
-$stmt = $this->pdo->prepare($sql);
-$stmt->bindValue(":name", $name);
-$stmt->execute();
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+        $heros = [];
 
-if(!$data){
-    return true;
-}
+        foreach ($datas as $data) {
+            $heros[] = HeroMapper::convertirEnInstance($data);
+        }
 
-session_start();
-$_SESSION["name"] = $data["user_name"];
-$_SESSION["pv"] = $data["pv"];
-$_SESSION["img"] = $data["url_img"];
-
-
-
-
-$this->getHero($name);
-return false;
-}
-
-
-public function createHero(string $name, $pv = 100, $url_img = "./assets/image/hero.png") {
-
-   $sql = "INSERT INTO hero (user_name, pv, url_img) VALUES (:name, :pv, :url_img)";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindValue(':name', $name);
-        $stmt->bindValue(':pv', $pv);
-        $stmt->bindValue(':url_img', $url_img);
-        $stmt->execute();
-        //$this->getHero($name);
-        $heroInstance = self::getHero($name);
-session_start();
-$_SESSION["name"] = $name; 
-$_SESSION["pv"] = $pv;
-$_SESSION["img"] = $url_img;
-
-
-
-        return $heroInstance;
+        return $heros;
     }
 
-
-
-    public function getHero($name) {
-
+    /**
+     * Cette fonction verifie si unhero avec un nom en particulier existe. si c'est le cas il le retourne, sinon il retourne null
+     */
+    public function findHeroByName(string $name): ?Hero
+    {
 
         $sql = "SELECT * FROM hero WHERE user_name = :name";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindValue(':name', $name);
+        $stmt->bindValue(":name", $name);
         $stmt->execute();
-        $utilisateurEnFormeData =  $stmt->fetch();
-        if(!$utilisateurEnFormeData){
-            return ;
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (!$data) {
+            return null;
         }
-        $monHeroMapper = new HeroMapper;
 
-        return $monHeroMapper->convertirEnInstance($utilisateurEnFormeData);
-
+        return HeroMapper::convertirEnInstance($data);
     }
 
 
+    public function createHero(Hero $hero): ?Hero
+    {
 
+        $sql = "INSERT INTO hero (user_name, pv, url_img) VALUES (:user_name, :pv, :url_img)";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':user_name', $hero->getName());
+        $stmt->bindValue(':pv', $hero->getPv());
+        $stmt->bindValue(':url_img', $hero->getUrl_img());
+        $stmt->execute();
+
+        $heroInstance = $this->findHeroByName($hero->getName());
+
+        if (!$heroInstance) {
+            return null;
+        }
+
+        return $heroInstance;
+    }
 }
-
-?>
