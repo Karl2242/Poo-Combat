@@ -101,8 +101,5 @@ return $this;
         $this->setCoin($chiffreAleatoire);
     }
 
-    /**
-     * Get the value of coin
-     */ 
-  
+
 }

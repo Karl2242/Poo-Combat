@@ -606,6 +606,10 @@ video {
   width: 30%;
 }
 
+.w-\[4\%\] {
+  width: 4%;
+}
+
 .w-\[45\%\] {
   width: 45%;
 }
@@ -626,36 +630,12 @@ video {
   width: 70%;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-\[0\%\] {
-  width: 0%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
-}
-
 .w-\[8\%\] {
   width: 8%;
 }
 
-.w-\[\%\] {
-  width: %;
-}
-
-.w-\[7\%\] {
-  width: 7%;
-}
-
-.w-\[5\%\] {
-  width: 5%;
-}
-
-.w-\[4\%\] {
-  width: 4%;
+.w-full {
+  width: 100%;
 }
 
 @keyframes pulse {
@@ -690,14 +670,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
 }
 
 .gap-10 {
@@ -804,6 +776,10 @@ video {
   padding-left: 0.75rem;
 }
 
+.pr-10 {
+  padding-right: 2.5rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -820,24 +796,14 @@ video {
   text-align: center;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-extrabold {
@@ -859,6 +825,10 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.lol{
+  background-color: yellow;
 }
 
 .hover\:scale-110:hover {

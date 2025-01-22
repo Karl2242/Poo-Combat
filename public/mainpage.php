@@ -13,11 +13,12 @@ include_once "./assets/headerfooter/header.php";
 ?>
 
 <body class="bg-center bg-[url('../image/decor-main.gif')] bg-cover">
-    <header class="flex w-[100%] justify-evenly pt-3">
-        <div class="w-[55%]">
+
+    <header class="flex w-[100%] justify-end pt-3">
+        <div class="w-[55%] flex justify-end">
             <img class="w-[8%]" src="./assets/image/logo.png" alt="">
         </div>
-        <div class="flex items-center w-[45%]">
+        <div class="flex justify-end pr-10 items-center w-[45%]">
             <img class="w-[4%]" src="./assets/image/coin.png" alt="">
             <p class="text-white font-extrabold text-2xl"><?= $hero->getCoin() ?></p>
         </div>
@@ -46,5 +47,5 @@ include_once "./assets/headerfooter/header.php";
 
     </main>
 
-    <script src="./assets/scripts/healthbar.js"></script>
+    <script defer src="./assets/scripts/healthbar.js"></script>
 </body>
