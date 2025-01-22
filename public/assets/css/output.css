@@ -558,6 +558,10 @@ video {
   position: static;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -590,6 +594,10 @@ video {
   width: 10%;
 }
 
+.w-\[100\%\] {
+  width: 100%;
+}
+
 .w-\[15\%\] {
   width: 15%;
 }
@@ -598,8 +606,16 @@ video {
   width: 30%;
 }
 
+.w-\[45\%\] {
+  width: 45%;
+}
+
 .w-\[50\%\] {
   width: 50%;
+}
+
+.w-\[55\%\] {
+  width: 55%;
 }
 
 .w-\[6\%\] {
@@ -614,31 +630,32 @@ video {
   width: 100%;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
+.w-\[0\%\] {
+  width: 0%;
 }
 
-.animate-bounce {
-  animation: bounce 1s infinite;
+.w-\[80\%\] {
+  width: 80%;
 }
 
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
+.w-\[8\%\] {
+  width: 8%;
 }
 
-.animate-ping {
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+.w-\[\%\] {
+  width: %;
+}
+
+.w-\[7\%\] {
+  width: 7%;
+}
+
+.w-\[5\%\] {
+  width: 5%;
+}
+
+.w-\[4\%\] {
+  width: 4%;
 }
 
 @keyframes pulse {
@@ -667,8 +684,20 @@ video {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-10 {
@@ -697,11 +726,6 @@ video {
 
 .border-solid {
   border-style: solid;
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
 
 .border-white {
@@ -734,28 +758,8 @@ video {
   background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[url\(\'\.\/assets\/image\/decor-main\.gif\'\)\] {
-  background-image: url('./assets/image/decor-main.gif');
-}
-
-.bg-\[url\(\'\.\.\/assets\/image\/decor-main\.gif\'\)\] {
-  background-image: url('../assets/image/decor-main.gif');
-}
-
-.bg-\[url\(\'\.\.\/\/image\/decor-main\.gif\'\)\] {
-  background-image: url('..//image/decor-main.gif');
-}
-
 .bg-\[url\(\'\.\.\/image\/decor-main\.gif\'\)\] {
   background-image: url('../image/decor-main.gif');
-}
-
-.bg-\[url\(\'\.\.\/image\/decors-main\.gif\'\)\] {
-  background-image: url('../image/decors-main.gif');
-}
-
-.bg-\[url\(\'\.\.\/image\/decors-\.gif\'\)\] {
-  background-image: url('../image/decors-.gif');
 }
 
 .bg-\[url\(\'\.\.\/image\/decors-combat\.gif\'\)\] {
@@ -770,8 +774,8 @@ video {
   background-position: center;
 }
 
-.bg-repeat {
-  background-repeat: repeat;
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .p-3 {
@@ -816,9 +820,24 @@ video {
   text-align: center;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-extrabold {

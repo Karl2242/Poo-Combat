@@ -13,6 +13,6 @@ if ($hero) {
 }
 
 
-$monRepo->createHero(new Hero(0, $_POST['name'], 100, "./assets/image/hero.png"));
+$monRepo->createHero(new Hero(0, $_POST['name'], 100, "./assets/image/hero.png", 0));
 header("Location: ../public/choiceHero.php");
 exit;

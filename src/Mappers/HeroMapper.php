@@ -9,7 +9,8 @@ class HeroMapper implements MapperContract
             $donnee["id"],
             $donnee["user_name"],
             $donnee["pv"],
-            $donnee["url_img"],   
+            $donnee["url_img"],
+            $donnee["coin"]
         );
 
     }

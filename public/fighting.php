@@ -21,7 +21,7 @@ include_once "./assets/headerfooter/header.php";
 
 ?>
 
-<body class="bg-center bg-[url('../image/decors-combat.gif')] bg-cover">
+<body class="bg-[url('../image/decors-combat.gif')] bg-cover bg-no-repeat">
 <header class="flex justify-center pt-3">
     <img class="w-[6%]" src="./assets/image/logo.png" alt="">
 </header>
@@ -61,14 +61,15 @@ if($hero->getPv() < 0){
 
 if($monster->getPv() < 0){
    $monster->changeHealth(100);
+   $hero->earnCoin();
    echo "Le monstre a perdu";
 }
 
    }
    ?>
 
-<form class="hover:cursor-pointer p-6 bg-red-600 text-white" action="../process/processChangeHp.php" method="post">
-<input class="w-full" type="submit" value="Retour a la base">
+<form class="p-6 text-white" action="../process/processChangeHp.php" method="post">
+<input class="mt-10 p-6 hover:cursor-pointer bg-red-600" type="submit" value="Retour a la base">
 </form>
 
 </div>

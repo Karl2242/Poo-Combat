@@ -7,14 +7,16 @@ class Hero
     private string $name;
     private int $pv;
     private string $url_img;
+    private int $coin;
 
 
-    public function __construct(int $id, string $name, int $pv, string $url_img)
+    public function __construct(int $id, string $name, int $pv, string $url_img, int $coin)
     {
         $this->id = $id;
         $this->name = $name;
         $this->pv = $pv;
         $this->url_img = $url_img;
+        $this->coin = $coin;
     }
 
 
@@ -41,6 +43,18 @@ class Hero
     {
         return $this->pv;
     }
+
+    public function getCoin()
+    {
+        return $this->coin;
+    }
+
+public function setCoin($coin){
+
+$this->coin = $coin;
+
+return $this;
+}
 
 
     public function changeHealth(int $pv): self
@@ -80,7 +94,15 @@ class Hero
         
         return $chiffreAleatoire;
             }
-
-    
     }
+
+    public function earnCoin(){
+        $chiffreAleatoire = rand(5, 12);
+        $this->setCoin($chiffreAleatoire);
+    }
+
+    /**
+     * Get the value of coin
+     */ 
+  
 }

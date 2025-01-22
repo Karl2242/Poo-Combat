@@ -9,6 +9,6 @@ session_start();
  */
 $hero = $_SESSION['hero'];
 $heroRepo = new HeroRepository();
-$heroRepo->setHp($hero->getPv(), $hero->getName());
+$heroRepo->setHp($hero->getPv(), $hero->getName(), $hero->getCoin());
 
 header("Location: ../public/mainpage.php");
