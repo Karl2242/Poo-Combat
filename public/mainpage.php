@@ -38,9 +38,11 @@ include_once "./assets/headerfooter/header.php";
 
         </div>
 
-        <div class="w-[30%]"> <!-- Partie droite -->
-
+        <div class="w-[30%] flex-col gap-5"> <!-- Partie droite -->
             <a class="bg-red-400 px-40 py-5 text-white rounded-lg shadow-xl hover:scale-125 transition-all" href="../process/startingFight.php">Combattre !</a>
+            <form class="pt-10" action="../process/processBoutique.php" method="post">
+                    <input class="bg-blue-500 hover:cursor-pointer rounded-xl shadow-lg w-[69%] pt-6 p-5 text-white" type="submit" value="Boutique">
+            </form>
 
 
         </div>
