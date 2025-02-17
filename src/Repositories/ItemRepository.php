@@ -5,10 +5,11 @@ class itemRepository extends AbstractRepository
 
 public function findItem(){
     $sql = "SELECT * FROM item";
-    $stmt = $this->pdo->query($sql);
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
     $datas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    
+    return ItemMapper::convertirEnInstance($datas);
 }
 
 }

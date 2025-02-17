@@ -2,5 +2,5 @@
 
 interface MapperContract
 {
-    public static function convertirEnInstance(array $donnee): object;
+    public static function convertirEnInstance(array $donnee);
 }
