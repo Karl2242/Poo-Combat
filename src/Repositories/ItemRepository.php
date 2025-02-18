@@ -9,7 +9,7 @@ public function findItem(){
     $stmt->execute();
     $datas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    return ItemMapper::convertirEnInstance($datas);
+    return $datas;
 }
 
 }

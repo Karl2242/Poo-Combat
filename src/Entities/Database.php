@@ -9,9 +9,9 @@ final class Database
         if (self::$pdo === null){
             try {
                 $host = "localhost";
-                $dbname = "karl_poo_combat";
-                $login = "karll";
-                $password = "supremebdd";
+                $dbname = "poo_combat";
+                $login = "root";
+                $password = "";
 
                 self::$pdo = new PDO("mysql:host={$host};dbname={$dbname}" , $login, $password);
             } catch (PDOException $error) {
