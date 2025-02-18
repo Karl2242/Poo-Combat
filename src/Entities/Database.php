@@ -10,8 +10,8 @@ final class Database
             try {
                 $host = "localhost";
                 $dbname = "karl_poo_combat";
-                $login = "root";
-                $password = "";
+                $login = "karll";
+                $password = "supremebdd";
 
                 self::$pdo = new PDO("mysql:host={$host};dbname={$dbname}" , $login, $password);
             } catch (PDOException $error) {
