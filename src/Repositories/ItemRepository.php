@@ -12,6 +12,17 @@ public function findItem(){
     return $datas;
 }
 
+
+public function buyItem($userId, $itemId)
+{
+$sql = "INSERT INTO hero_item (item_id, hero_id) VALUES (:userId, itemId)";
+$stmt = $this->pdo->prepare($sql);
+$stmt->bindValue(":userid", $userId);
+$stmt->bindValue(":itemid", $itemId);
+$stmt->execute();
+}
+
+
 }
 
 ?>
